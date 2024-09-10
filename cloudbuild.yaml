@@ -1,0 +1,22 @@
+---
+steps:
+  - name: gcr.io/cloud-builders/gsutil
+    entrypoint: 'bash'  
+    args: 
+      - '-c'
+      - | 
+          echo "hello" > obj.txt
+          ls
+          pwd
+
+  - name: gcr.io/cloud-builders/gcloud
+    entrypoint: 'bash'  
+    args: 
+      - '-c'
+      - | 
+          gcloud config list
+          gcloud auth list
+          gcloud storage cp obj.txt gs://artifacts
+ options:
+  logging: CLOUD_LOGGING_ONLY
+  
