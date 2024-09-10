@@ -5,7 +5,8 @@ steps:
     args: 
       - '-c'
       - | 
-          echo "hello" > obj1.txt
+          echo "hello1" > obj1.txt
+          echo "hello" > obj.txt
           ls
           pwd
 
@@ -16,5 +17,7 @@ steps:
       - | 
           gcloud config list
           gcloud storage cp obj.txt gs://artifacts-1
+          gcloud storage cp obj1.txt gs://artifacts-1
+          
 options:
   logging: CLOUD_LOGGING_ONLY
