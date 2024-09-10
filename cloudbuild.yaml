@@ -5,7 +5,7 @@ steps:
     args: 
       - '-c'
       - | 
-          echo "hello" > obj.txt
+          echo "hello" > obj1.txt
           ls
           pwd
 
