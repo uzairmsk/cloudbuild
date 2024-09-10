@@ -17,6 +17,5 @@ steps:
           gcloud config list
           gcloud auth list
           gcloud storage cp obj.txt gs://artifacts-1
- options:
+options:
   logging: CLOUD_LOGGING_ONLY
-  
